@@ -11,3 +11,13 @@
     }
   }
 }
+
+// & - 상위 선택자 참조
+.list {
+  li {
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
