@@ -37,3 +37,16 @@
     right: 30px;
   };
 }
+
+// 변수
+$size : 200px;
+
+.container {
+  position: relative;
+  top: $size;
+  .item {
+    width: $size;
+    height: $size;
+    transform: translateX($size);
+  }
+}
