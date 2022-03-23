@@ -116,7 +116,22 @@ $color : red;
 $boolean: true;
 $null : null;
 $list : orange, royalblue, yellow;
-$map: ( //자바스크립트의 객체{ } 와 유사
+$map: ( //자바스크립트의 객체{ }와 유사
   o: orange,
   r: royalblue
-) 
+); 
+
+// each 반복문
+// list 반복
+@each $color in $list {
+  .box {
+    color: $color;
+  }
+};
+
+// map 반복
+@each $key, $value in $list {
+  .box-#{$key} {
+    color: $value;
+  }
+};
