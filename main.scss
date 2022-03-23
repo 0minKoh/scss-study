@@ -79,3 +79,12 @@ $size : 200px;
     @include center(center);
   }
 }
+
+// for 반복문
+
+// i에 1부터 10까지 순차적으로 넣어줄 것임
+@for $i from 1 through 10 {
+  .box:nth-child(#{$i}) {
+    width: 100px * $i;
+  }
+}
