@@ -50,3 +50,32 @@ $size : 200px;
     transform: translateX($size);
   }
 }
+
+// 재활용
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container3 {
+  @include center;
+  .item {
+    @include center;
+  }
+}
+
+// 재활용(믹스인)을 함수처럼 사용하기
+@mixin center($variable: center) {
+  display: flex;
+  justify-content: $variable;
+  align-items: $variable;
+}
+
+.container3 {
+  @include center;
+  .item {
+    @include center(center);
+  }
+}
