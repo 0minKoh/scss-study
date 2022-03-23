@@ -88,3 +88,23 @@ $size : 200px;
     width: 100px * $i;
   }
 }
+
+// 함수
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@function ratio($size, $ratio) {
+  @return $size * $ratio
+};
+
+.container3 {
+  @include center;
+  width: ratio(300px, (9/16));
+  height: ratio(200px, (9/16));
+  .item {
+    @include center;
+  }
+}
