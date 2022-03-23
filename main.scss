@@ -135,3 +135,21 @@ $map: ( //자바스크립트의 객체{ }와 유사
     color: $value;
   }
 };
+
+// @content로 mixin에 내용 추가하기
+@mixin center($variable: center) {
+  display: flex;
+  justify-content: $variable;
+  align-items: $variable;
+  @content; //해석: 이후 내용을 추가해도 좋습니다!
+}
+
+.container3 {
+  @include center {
+    width: auto;
+    height: auto;
+  };
+  .item {
+    @include center(center);
+  }
+}
