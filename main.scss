@@ -108,3 +108,15 @@ $size : 200px;
     @include center;
   }
 }
+
+// 데이터 종류
+$number : 1;
+$string : bold; // relative, " "
+$color : red;
+$boolean: true;
+$null : null;
+$list : orange, royalblue, yellow;
+$map: ( //자바스크립트의 객체{ } 와 유사
+  o: orange,
+  r: royalblue
+) 
